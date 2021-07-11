@@ -1,6 +1,5 @@
 package NumberGuessingGame;
-/** Java game “Guess a Number” that allows user to guess a random number that has been generated.
-*/
+/**A java number guessing game that allows user input*/
 import javax.swing.*;
  
 public class NumberGuessingGame {
@@ -22,19 +21,19 @@ public class NumberGuessingGame {
 
     public static String determineGuess(int userAnswer, int computerNumber, int count){
         if (userAnswer <=0 || userAnswer >100) {
-            return "Your guess is invalid";
+            return "You no sabi guess? Try again abeg";
         }
         else if (userAnswer == computerNumber ){
-            return "Correct!\nTotal Guesses: " + count;
+            return "You try sha!\nTotal on-spot guesses: " + count;
         }
         else if (userAnswer > computerNumber) {
-            return "Your guess is too high, try again.\nTry Number: " + count;
+            return "Nah too high bruh, try again.\nTry Number: " + count;
         }
         else if (userAnswer < computerNumber) {
-            return "Your guess is too low, try again.\nTry Number: " + count;
+            return " Nah still too low, try again.\nTry Number: " + count;
         }
         else {
-            return "Your guess is incorrect\nTry Number: " + count;
+            return "your guessis wrooong!!!\nTry again: " + count;
         }
     }
 }
